@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOGIN RESPONSIVE</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      background-color: rgb(47, 72, 92);
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      font-family: Robotton, Arial;
+    }
+
+    .container form {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 320px;
+      height: 290px;
+      background-color: rgb(25, 25, 25);
+      box-shadow: 0px 0px 35px rgb(25, 25, 25);
+    }
+
+    .container form p {
+      color: white;
+      align-self: center;
+      font-size: 1.5em;
+      text-transform: uppercase;
+      margin-top: 3rem;
+
+    }
+
+    .container form input {
+      margin-top: 1.1rem;
+      padding: 10px 0 10px 0;
+      background-color: transparent;
+      width: 55%;
+      align-self: center;
+      text-align: center;
+      color: white;
+      border: 2px solid rgb(39, 39, 214);
+      border-radius: 20px;
+      outline: none;
+      transition: all .3s;
+      font-size: 13px;
+    }
+
+    .container form input:focus {
+      border: 2px solid rgb(4, 253, 83);
+      width: 80%;
+    }
+
+    .container form input::placeholder {
+      text-transform: capitalize;
+    }
+
+    .container form input:nth-child(4) {
+      color: white;
+      background-color: transparent;
+      border: 2px solid rgb(4, 253, 83);
+      width: 30%;
+      text-transform: capitalize;
+      outline: none;
+      transition: none;
+    }
+
+    .container form input:nth-child(4):hover {
+      background-color: rgb(4, 253, 83);
+      cursor: pointer;
+    }
+
+    .container form input:nth-child(4):active {
+      height: 290px;
+      position: absolute;
+      width: 320px;
+      padding: 0;
+      margin: 0;
+      border-radius: 0;
+      background-color: rgb(16, 40, 23);
+      border: none;
+      transition: all .2s;
+      color: rgb(16, 16, 16);
+      font-size: 2em;
+      box-shadow: 0px 0px 45px 2px inset rgb(25, 25, 25);
+    }
+
+    @media (max-width: 600px) {
+      .container form {
+        flex: 1;
+        height: 100vh;
+        justify-content: center;
+      }
+
+      .container form input:nth-child(4):active {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .container form p {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <form>
+      <p>login</p>
+      <input type="text" placeholder="username">
+      <input type="password" placeholder="password">
+      <input type="submit" value="login">
+    </form>
+  </div>
+</body>
+
+</html>
